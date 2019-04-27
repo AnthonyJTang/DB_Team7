@@ -20,8 +20,13 @@ insert into PAYMENTTRANSACTION values (003, 12.23, 'Card', 'Member');
 
 insert into BOOKINGDETAIL values (1, 001, 'Florida', '01/01/19', 7, '01/01/19', '01/07/19');
 insert into BOOKINGDETAIL values (1, 001, 'Japan', '11/21/19', 7, '11/21/19', '11/27/19');
+insert into BOOKINGDETAIL values (3, 003, 'California', '05/23/19', 4, '05/23/19', '05/23/19');
 
-insert into SALESPERSON
+insert into SALESPERSON values (089, 649.77, 1575.05);
+insert into SALESPERSON values (015, 58.06, 94.19);
+insert into SALESPERSON values (032, 108.90, 2351.47);
+
+insert into 
 
 --validation select tables. 
 select * from ADDRESS;
