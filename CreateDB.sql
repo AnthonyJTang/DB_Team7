@@ -55,10 +55,11 @@ CREATE TABLE PackageTour(
 CREATE TABLE Promotion(					
     PromotionID int  	NOT NULL,
     PackageTourID int   	NOT NULL,
-    Name varchar(255),
+    NameID int,
     Description varchar(255),
     PRIMARY KEY(PromotionID),
-    FOREIGN KEY(PackageTourID) REFERENCES PackageTour
+    FOREIGN KEY(PackageTourID) REFERENCES PackageTour,
+    FOREIGN KEY(NameID) REFERENCES Name
 );		
 
 CREATE TABLE PaymentTransaction (							
@@ -84,10 +85,12 @@ CREATE TABLE BookingDetail(
 
 CREATE TABLE Employee (						
     EmployeeID int  	NOT NULL,
+    NameID int,
     Salary int,
     Date_of_Joining varchar(255),
     DOB varchar(255),
-	PRIMARY KEY(EmployeeID)
+	PRIMARY KEY(EmployeeID),
+    FOREIGN KEY(NameID) REFERENCES Name
 );	
 						
 CREATE TABLE Salesperson (						
@@ -112,13 +115,14 @@ CREATE TABLE Manager (
 
 CREATE TABLE Customer (
     CustomerID int 	NOT NULL,
-    Name varchar(255),
+    NameID int,
     DOB date,
     EmailAddress varchar(255),
     AddressID int,
     CustomerType varchar(255),
     MembershipID int,
     PRIMARY KEY(CustomerID),
+    FOREIGN KEY (NameID) REFERENCES Name,
     FOREIGN KEY(MembershipID) REFERENCES Membership
     
 );			
