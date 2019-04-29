@@ -15,6 +15,9 @@ insert into ADDRESS values (012, '75028', 'Flower Mound', 'FM 2499');
 insert into ADDRESS values (013, '75028', 'Flower Mound', 'Kirkpatrick Ln');
 insert into ADDRESS values (014, '75028', 'Flower Mound', 'Morriss Rd');
 insert into ADDRESS values (015, '75028', 'Flower Mound', 'College Pkwy');
+insert into ADDRESS values (016, '75028', 'Flower Mound', 'Dixon Ln');
+insert into ADDRESS values (017, '75028', 'Flower Mound', 'Waketon');
+insert into ADDRESS values (018, '75028', 'Flower Mound', 'Spinks');
 
 insert into NAME values (001, 'Mark', 'J', 'Hernandez');
 insert into NAME values (002, 'Richard', 'R', 'Schmidt');
@@ -32,8 +35,23 @@ insert into NAME values (013, 'Nicholas', 'H', 'Zwerver');
 insert into NAME values (014, 'Patrick', 'M', 'Shovlin');
 insert into NAME values (015, 'Garret', 'A', 'Clark');
 
-insert into BRANCH values (001, 2800);
-insert into BRANCH values (003, 800);
+insert into MEMBERSHIP values (001, '1', '123456789');
+insert into MEMBERSHIP values (002, '5', '987654321');
+insert into MEMBERSHIP values (003, '3', '246810111');
+
+insert into GIFTCARD values ('123456789', 12000.56);
+insert into GIFTCARD values ('987654321', 567.08);
+insert into GIFTCARD values ('123456789', 945.26);
+
+insert into TRANSPORTATION values (1, 'Bus');
+insert into TRANSPORTATION values (2, 'Plane');
+insert into TRANSPORTATION values (3, 'Car');
+insert into TRANSPORTATION values (4, 'Train');
+insert into TRANSPORTATION values (5,'Boat');
+
+insert into BRANCH values (001, 016);
+insert into BRANCH values (002, 017);
+insert into BRANCH values (003, 018);
 
 insert into PACKAGETOUR values (101, 'Florida', 'Fairfield', 6);
 insert into PACKAGETOUR values (22, 'California', 'Courtyard', 2);
