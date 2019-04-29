@@ -1,8 +1,36 @@
 --fill the database with just some data.
 
-insert into ADDRESS values (4768, '75028', 'Flower Mound', 'Hanover Dr');
-insert into ADDRESS values (2800, '75080', 'Richardson', 'Waterview Parkway');
-insert into ADDRESS values (800, '75080', 'Richardson', 'West Campbell Road');
+insert into ADDRESS values (001, '75028', 'Flower Mound', 'Hanover Dr');
+insert into ADDRESS values (002, '75080', 'Richardson', 'Waterview Parkway');
+insert into ADDRESS values (003, '75080', 'Richardson', 'West Campbell Road');
+insert into ADDRESS values (004, '75028', 'Richardson', 'Arapaho');
+insert into ADDRESS values (005, '75080', 'Richardson', 'Coit');
+insert into ADDRESS values (006, '75080', 'Richardson', 'Synergy Park');
+insert into ADDRESS values (007, '75080', 'Richardson', 'Waterview');
+insert into ADDRESS values (008, '75080', 'Richardson', 'Foyd');
+insert into ADDRESS values (009, '75080', 'Richardson', 'Belt Line');
+insert into ADDRESS values (010, '75080', 'Richardson', 'Frankford Rd');
+insert into ADDRESS values (011, '75028', 'Flower Mound', 'FM 407');
+insert into ADDRESS values (012, '75028', 'Flower Mound', 'FM 2499');
+insert into ADDRESS values (013, '75028', 'Flower Mound', 'Kirkpatrick Ln');
+insert into ADDRESS values (014, '75028', 'Flower Mound', 'Morriss Rd');
+insert into ADDRESS values (015, '75028', 'Flower Mound', 'College Pkwy');
+
+insert into NAME values (001, 'Mark', 'J', 'Hernandez');
+insert into NAME values (002, 'Richard', 'R', 'Schmidt');
+insert into NAME values (003, 'Matt', 'S', 'Johnson');
+insert into NAME values (004, 'George', 'F', 'Howard');
+insert into NAME values (005, 'Chris', 'K', 'Martin');
+insert into NAME values (006, 'Raymond', 'M', 'Kardon');
+insert into NAME values (007, 'Steve', 'S', 'Toth');
+insert into NAME values (008, 'Frank', 'M', 'Aguilar');
+insert into NAME values (009, 'Cal', 'A', 'Jones');
+insert into NAME values (010, 'Brandon', 'R', 'Cross');
+insert into NAME values (011, 'Thomas', 'G', 'Farmer');
+insert into NAME values (012, 'Aaron', 'A', 'Bigbie');
+insert into NAME values (013, 'Nicholas', 'H', 'Zwerver');
+insert into NAME values (014, 'Patrick', 'M', 'Shovlin');
+insert into NAME values (015, 'Garret', 'A', 'Clark');
 
 insert into BRANCH values (001, 2800);
 insert into BRANCH values (003, 800);
