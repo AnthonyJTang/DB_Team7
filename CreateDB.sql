@@ -53,11 +53,10 @@ CREATE TABLE PackageTour(
 CREATE TABLE Promotion(					
     PromotionID int  	NOT NULL,
     PackageTourID int   	NOT NULL,
-    NameID int,
+    PromoName varchar(255),
     Description varchar(255),
     PRIMARY KEY(PromotionID),
-    FOREIGN KEY(PackageTourID) REFERENCES PACKAGETOUR(TourID),
-    FOREIGN KEY(NameID) REFERENCES NAMES(PID)
+    FOREIGN KEY(PackageTourID) REFERENCES PACKAGETOUR(TourID)
 );		
 
 CREATE TABLE PaymentTransaction (							
@@ -112,14 +111,15 @@ CREATE TABLE Manager (
 
 CREATE TABLE Customer (
     CustomerID int 	NOT NULL,
-    NameID int,
-    DOB date,
+    NameID int NOT NULL,
+    DOB varchar(255),
     EmailAddress varchar(255),
-    AddressID int,
+    AddressID int NOT NULL,
     CustomerType varchar(255),
     MembershipID int,
     PRIMARY KEY(CustomerID),
     FOREIGN KEY(NameID) REFERENCES NAMES(PID),
+    FOREIGN KEY(AddressID) REFERENCES ADDRESS(AddressID),
     FOREIGN KEY(MembershipID) REFERENCES MEMBERSHIP(MembershipID)
 );			
 
