@@ -8,7 +8,6 @@ CREATE TABLE Address(
     PRIMARY KEY(AddressID)
 );	
 
-
 CREATE TABLE Name(						
     PID int   NOT NULL,
     first varchar(255),
@@ -16,7 +15,6 @@ CREATE TABLE Name(
     last varchar(255),
     PRIMARY KEY(PID)
 );
-
 							
 CREATE TABLE Membership (							
     MembershipID int  NOT NULL,
@@ -25,17 +23,17 @@ CREATE TABLE Membership (
     PRIMARY KEY(MembershipID)
 );					
 							
-CREATE TABLE  GiftCard (						
+CREATE TABLE  GiftCard(						
     GiftcardNumber varchar(255)  NOT NULL,
     Amount float,
     PRIMARY KEY(GiftcardNumber)
 );			
 							
-CREATE TABLE Transportation (				
+CREATE TABLE Transportation(				
     TransModeID int  	NOT NULL,
+    Type varchar(255),
     PRIMARY KEY(TransModeID)
 );
-
 
 CREATE TABLE Branch(
 	BranchID int  	NOT NULL,
@@ -81,7 +79,6 @@ CREATE TABLE BookingDetail(
     PRIMARY KEY (BookingDetail),
     FOREIGN KEY(TransactionID) REFERENCES PaymentTransaction
 );		 
-
 
 CREATE TABLE Employee (						
     EmployeeID int  	NOT NULL,
@@ -137,8 +134,3 @@ CREATE TABLE Bookings(
     FOREIGN KEY(CustomerID) REFERENCES Customer,
     FOREIGN KEY(Booking_Details) REFERENCES BookingDetail
 );	
-			
-
-
-
-

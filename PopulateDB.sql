@@ -53,16 +53,32 @@ insert into BRANCH values (001, 016);
 insert into BRANCH values (002, 017);
 insert into BRANCH values (003, 018);
 
-insert into PACKAGETOUR values (101, 'Florida', 'Fairfield', 6);
-insert into PACKAGETOUR values (22, 'California', 'Courtyard', 2);
-insert into PACKAGETOUR values (16, 'Japan', 'Radish on', 9);
+insert into PACKAGETOUR values (01, 'Florida', 'Fairfield', 6);
+insert into PACKAGETOUR values (02, 'California', 'Courtyard', 2);
+insert into PACKAGETOUR values (03, 'Japan', 'Imperial', 9);
+insert into PACKAGETOUR values (04, 'Kansas', 'Holiday Inn', 3);
+insert into PACKAGETOUR values (05, 'Arkansas', 'Hilton', 1);
+insert into PACKAGETOUR values (06, 'Texas', 'DoubleTree', 7);
+insert into PACKAGETOUR values (07, 'New Mexico', 'Ramada', 5);
 
-insert into PROMOTION values (001, 101, 'Promo1', 'description1');
-insert into PROMOTION values (002, 22, 'Promo2', 'another desc');
-insert into PROMOTION values (006, 16, 'Special3', 'last spec');
+insert into PROMOTION values (01, 01, 'Promo1', 'description1');
+insert into PROMOTION values (02, 02, 'Promo2', 'another desc');
+insert into PROMOTION values (03, 03, 'Special3', 'spec3');
+insert into PROMOTION values (04, 04, 'Special4', 'spec');
+insert into PROMOTION values (05, 05, 'Special5', 'spec5');
+insert into PROMOTION values (06, 06, 'Special6', 'spec6');
+insert into PROMOTION values (07, 07, 'Special7', 'spec7');
+insert into PROMOTION values (08, 08, 'Special8', 'spec8');
+insert into PROMOTION values (09, 09, 'Special9', 'spec9');
+insert into PROMOTION values (10, 10, 'Special10', 'spec10');
+insert into PROMOTION values (11, 11, 'Special11', 'spec11');
+insert into PROMOTION values (12, 12, 'Special12', 'spec12');
+insert into PROMOTION values (13, 13, 'Special13', 'spec13');
+insert into PROMOTION values (14, 14, 'Special14', 'spec14');
+insert into PROMOTION values (15, 15, 'Special15', 'spec15');
 
-insert into PAYMENTTRANSACTION values (001, 100.99, 'Paypal', 'Member');
-insert into PAYMENTTRANSACTION values (003, 12.23, 'Card', 'Member');
+insert into PAYMENTTRANSACTION values (01, 100.99, 'Paypal', 'Member');
+insert into PAYMENTTRANSACTION values (032, 12.23, 'Card', 'Member');
 
 insert into BOOKINGDETAIL values (1, 001, 'Florida', '01/01/19', 7, '01/01/19', '01/07/19');
 insert into BOOKINGDETAIL values (1, 001, 'Japan', '11/21/19', 7, '11/21/19', '11/27/19');
