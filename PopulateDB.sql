@@ -78,7 +78,8 @@ insert into PROMOTION values (14, 07, 'Special14', 'spec14');
 insert into PROMOTION values (15, 02, 'Special15', 'spec15');
 
 insert into PAYMENTTRANSACTION values (01, 100.99, 'Paypal', 'Member');
-insert into PAYMENTTRANSACTION values (032, 12.23, 'Card', 'Member');
+insert into PAYMENTTRANSACTION values (02, 312.23, 'Card', 'Member');
+insert into PAYMENTTRANSACTION values (03, 446.70, 'Card', 'Member');
 
 insert into BOOKINGDETAIL values (1, 001, 'Florida', '01/01/19', 7, '01/01/19', '01/07/19');
 insert into BOOKINGDETAIL values (2, 002, 'Japan', '11/21/19', 7, '11/21/19', '11/27/19');

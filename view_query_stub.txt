@@ -26,12 +26,16 @@ LIMIT    1;
 4. Find the age of top 5 salesmen in the agency. 
 
 SELECT age
-FROM Salesmen
+FROM Salesperson
 GROUP BY Destination
 ORDER BY value_occurrence DESC
 LIMIT    5;
 
 5. Find the most common mode of payment used by customers.
+SELECT Type
+FROM PaymentTransaction
+ORDER BY value_occurence DESC
+LIMIT	1;
 
 6. Find the name and membership level of members, who booked the most expensive tour in the past year.
  7. Find the names of customers and city they live in who have spent over $10,000. 
