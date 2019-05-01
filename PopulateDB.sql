@@ -81,18 +81,18 @@ insert into PAYMENTTRANSACTION values (01, 100.99, 'Paypal', 'Member');
 insert into PAYMENTTRANSACTION values (02, 312.23, 'Card', 'Member');
 insert into PAYMENTTRANSACTION values (03, 446.70, 'Card', 'Member');
 
-insert into BOOKINGDETAIL values (1, 001, 'Florida', '01/01/19', 7, '01/01/19', '01/07/19');
-insert into BOOKINGDETAIL values (2, 002, 'Japan', '11/21/19', 7, '11/21/19', '11/27/19');
-insert into BOOKINGDETAIL values (3, 003, 'California', '05/23/19', 4, '05/23/19', '05/23/19');
+insert into BOOKINGDETAIL values (1, 001, 'Florida', '2019-01-01', 7, '2019-01-01', '2019-01-01');
+insert into BOOKINGDETAIL values (2, 002, 'Japan', '2019-11-21', 7, '2019-11-21', '2019-11-21');
+insert into BOOKINGDETAIL values (3, 003, 'California', '2019-05-23', 4, '2019-05-23', '2019-05-23');
 
-insert into EMPLOYEE values (001, 001, '12.20', '01/12/19', '01/02/88');
-insert into EMPLOYEE values (002, 002, '14.20', '01/22/19', '02/04/87');
-insert into EMPLOYEE values (003, 003, '12.00', '01/12/19', '03/8/79');
-insert into EMPLOYEE values (004, 004, '8.20', '01/7/19', '05/20/92');
-insert into EMPLOYEE values (005, 005, '9.50', '01/8/19', '06/14/87');
-insert into EMPLOYEE values (006, 006, '11.20', '12/1/19', '07/11/86');
-insert into EMPLOYEE values (007, 007, '13.20', '11/3/19', '04/10/86');
-insert into EMPLOYEE values (008, 008, '11.10', '05/5/19', '11/06/89');
+insert into EMPLOYEE values (001, 001, '12.20', '2019-01-12', '1988-01-02');
+insert into EMPLOYEE values (002, 002, '14.20', '2019-01-27', '1987-02-04');
+insert into EMPLOYEE values (003, 003, '12.00', '2019-01-12', '1979-03-08');
+insert into EMPLOYEE values (004, 004, '8.20', '2019-02-45', '1992-05-20');
+insert into EMPLOYEE values (005, 005, '9.50', '2019-01-08', '1957-06-14');
+insert into EMPLOYEE values (006, 006, '11.20', '2018-12-18', '1986-07-11');
+insert into EMPLOYEE values (007, 007, '13.20', '2018-11-17', '1986-04-10');
+insert into EMPLOYEE values (008, 008, '11.10', '2017-05-05', '1989-11-09');
 
 insert into PHONENUMBER values (001, '972-992-1023');
 insert into PHONENUMBER values (002, '421-123-5345');
@@ -111,9 +111,9 @@ insert into MANAGER values (004, 001);
 insert into MANAGER values (005, 002);
 insert into MANAGER values (006, 003);
 
-insert into CUSTOMER values (001, 009, '11/02/78', 'email1@gmail.edu', 018, 'Member', 001);
-insert into CUSTOMER values (011, 010, '8/11/89', 'email2@gmail.edu', 017, 'Member', 002);
-insert into CUSTOMER values (111, 011, '11/23/70', 'email3@gmail.edu', 016, null, 003);
+insert into CUSTOMER values (001, 009, '1978-11-02', 'email1@gmail.edu', 018, 'Member', 001);
+insert into CUSTOMER values (011, 010, '1989-08-11', 'email2@gmail.edu', 017, 'Member', 002);
+insert into CUSTOMER values (111, 011, '1970-11-03', 'email3@gmail.edu', 016, null, 003);
 
 insert into BOOKINGS values (002, 001, 111, 1);
 insert into BOOKINGS values (004, 002, 011, 2);

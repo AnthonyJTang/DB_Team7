@@ -71,10 +71,10 @@ CREATE TABLE BookingDetail(
     BookingDetailID int   NOT NULL,
     TransactionID int  NOT NULL,
     Destination varchar(255),
-    TravelDate varchar(255),
+    TravelDate date,
     NumberofIndividuals	 int,				
-    Arrival varchar(255),
-    Departure varchar(255),
+    Arrival date,
+    Departure date,
     PRIMARY KEY (BookingDetailID),
     FOREIGN KEY(TransactionID) REFERENCES PAYMENTTRANSACTION(TransactionID)
 );		 
@@ -83,8 +83,8 @@ CREATE TABLE Employee (
     EmployeeID int  	NOT NULL,
     NameID int,
     Salary int,
-    Date_of_Joining varchar(255),
-    DOB varchar(255),
+    Date_of_Joining date,
+    DOB date,
 	PRIMARY KEY(EmployeeID),
     FOREIGN KEY(NameID) REFERENCES NAMES(PID)
 );	
@@ -112,7 +112,7 @@ CREATE TABLE Manager (
 CREATE TABLE Customer (
     CustomerID int 	NOT NULL,
     NameID int NOT NULL,
-    DOB varchar(255),
+    DOB date,
     EmailAddress varchar(255),
     AddressID int NOT NULL,
     CustomerType varchar(255),
