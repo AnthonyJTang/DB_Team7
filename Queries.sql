@@ -37,12 +37,21 @@ LIMIT	1;
 
 --6. Find the name and membership level of members, who booked the most expensive tour in the past year.
 
-7. Find the names of customers and city they live in who have spent over $10,000. 
-8. Find salesmen who have not made any sale or have no sale in the past 5 months. 
-9. Find the details of customers who are senior citizens (age>65). 
-10. Find the salesmen who made a booking within a month of joining. 
-11. List all the sales that have been made after the most current employee was hired. 
-12. Find the names of customers who have visited the travel agency but have not made any bookings. 
-13. Find the list of customers who have made more than one bookings in the past year but were booked by different salesmen. 
-14. Find the count of bookings made by individuals and count of bookings made by companies.
-15. Find the count of bookings made by members in the year having maximum bookings. 
+--7. Find the names of customers and city they live in who have spent over $10,000. 
+
+--8. Find salesmen who have not made any sale or have no sale in the past 5 months. 
+
+
+--9. Find the details of customers who are senior citizens (age>65). 
+
+--10. Find the salesmen who made a booking within a month of joining. 
+
+--11. List all the sales that have been made after the most current employee was hired. 
+
+--12. Find the names of customers who have visited the travel agency but have not made any bookings. 
+
+--13. Find the list of customers who have made more than one bookings in the past year but were booked by different salesmen. 
+
+--14. Find the count of bookings made by individuals and count of bookings made by companies.
+
+--15. Find the count of bookings made by members in the year having maximum bookings. 
