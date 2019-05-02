@@ -25,7 +25,8 @@ LIMIT    1;
 --4. Find the age of top 5 salesmen in the agency. 
 
 SELECT DATE_DIFF(CURDATE(), DOB)
-FROM Salesperson
+--use view below
+FROM TopSalesmen
 ORDER BY value_occurrence DESC
 LIMIT    5;
 

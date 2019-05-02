@@ -81,7 +81,6 @@ CREATE TABLE BookingDetail(
 
 CREATE TABLE Employee (						
     EmployeeSocial int  	NOT NULL,
-    NameID int,
     Salary int,
     Date_of_Joining date,
     DOB date,
