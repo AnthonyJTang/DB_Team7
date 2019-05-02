@@ -1,8 +1,8 @@
-CREATE VIEW TopSalesmen AS 
-    SELECT n.first, n.last, e.date_of_joining
-    FROM EMPLOYEE e, SALESPERSON s, NAMES n
-    WHERE e.EmployeeID = s.EmployeeID
-    AND s.Floor_Sales > 5  or s.Internet_Sales > 5 );
+--CREATE VIEW TopSalesmen AS 
+--    SELECT n.first, n.last, e.date_of_joining
+--    FROM EMPLOYEE e, SALESPERSON s, NAMES n
+--    WHERE e.EmployeeID = s.EmployeeID
+--    AND s.Floor_Sales > 5  or s.Internet_Sales > 5;
         
 --CREATE VIEW TopCustomer (
 --AS
@@ -14,9 +14,10 @@ CREATE VIEW TopSalesmen AS
 --
 
 CREATE VIEW PopularDestination AS
-    SELECT Destination
-    FROM BOOKINGDETAIL
-    GROUP BY Destination DESC
+    SELECT bd.Destination, pt.amount
+    FROM BOOKINGDETAIL bd, PAYMENTTRANSACTION pt
+    GROUP BY bd.Destination
+    ORDER BY COUNT(GROUP BY bd.Destination) DESC;
 
 SELECT * FROM POPULARDESTINATION
 

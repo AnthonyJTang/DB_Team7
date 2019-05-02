@@ -9,11 +9,11 @@ CREATE TABLE Address(
 );	
 
 CREATE TABLE People(						
-    Social int   NOT NULL,
+    SSN int   NOT NULL,
     first varchar(255),
     middle varchar(255),
     last varchar(255),
-    PRIMARY KEY(Social)
+    PRIMARY KEY(SSN)
 );
 							
 CREATE TABLE Membership (							
@@ -80,32 +80,39 @@ CREATE TABLE BookingDetail(
 );		 
 
 CREATE TABLE Employee (						
-    EmployeeSocial int  	NOT NULL,
+    SSN int  	NOT NULL,
     Salary int,
     Date_of_Joining date,
     DOB date,
-	PRIMARY KEY(EmployeeSocial)
+	PRIMARY KEY(SSN)
 );	
 						
 CREATE TABLE Salesperson (						
-    EmployeeSocial int	NOT NULL,	
+    SSN int	NOT NULL,	
     Floor_Sales int,
     Internet_Sales int
 );			
 
 CREATE TABLE PhoneNumber(
-	Social int  	NOT NULL,
+	SSN int  	NOT NULL,
 	PhoneNumber varchar(255)
 );
 
 CREATE TABLE Manager (
-    EmployeeSocial int  	NOT NULL,
+    SSN int  	NOT NULL,
     BranchID int     NOT NULL,
     FOREIGN KEY(BranchID) REFERENCES BRANCH(BranchID)
 );		
 
+CREATE TABLE Receptionist (
+    SSN int NOT NULL,
+    ManagerID int,
+    FOREIGN KEY(SSN) REFERENCES PEOPLE(SSN),
+    FOREIGN KEY(ManagerID) REFERENCES PEOPLE(SSN)
+);
+
 CREATE TABLE Customer (
-    CustomerSocial int 	NOT NULL,
+    SSN int 	NOT NULL,
     DOB date,
     EmailAddress varchar(255),
     AddressID int NOT NULL,
