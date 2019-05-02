@@ -1,14 +1,5 @@
 
 
-1. Find the most visited destination. 
-
-SELECT Destination
-COUNT (Destination) > 3
-FROM BookingDetail bd
-GROUP BY Destination
-ORDER BY value_occurrence DESC
-LIMIT    1;
-
 2. For each salesperson class, list the number of employees belonging to this class. 
 
 COUNT(Salesperson)
