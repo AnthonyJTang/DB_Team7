@@ -37,7 +37,7 @@ ORDER BY value_occurence DESC
 LIMIT	1;
 
 --6. Find the name and membership level of members, who booked the most expensive tour in the past year.
-
+SELECT 
 --7. Find the names of customers and city they live in who have spent over $10,000. 
 
 --8. Find salesmen who have not made any sale or have no sale in the past 5 months. 
