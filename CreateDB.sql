@@ -8,12 +8,12 @@ CREATE TABLE Address(
     PRIMARY KEY(AddressID)
 );	
 
-CREATE TABLE Names(						
-    PID int   NOT NULL,
+CREATE TABLE People(						
+    Social int   NOT NULL,
     first varchar(255),
     middle varchar(255),
     last varchar(255),
-    PRIMARY KEY(PID)
+    PRIMARY KEY(Social)
 );
 							
 CREATE TABLE Membership (							
@@ -80,45 +80,39 @@ CREATE TABLE BookingDetail(
 );		 
 
 CREATE TABLE Employee (						
-    EmployeeID int  	NOT NULL,
+    EmployeeSocial int  	NOT NULL,
     NameID int,
     Salary int,
     Date_of_Joining date,
     DOB date,
-	PRIMARY KEY(EmployeeID),
-    FOREIGN KEY(NameID) REFERENCES NAMES(PID)
+	PRIMARY KEY(EmployeeSocial)
 );	
 						
 CREATE TABLE Salesperson (						
-    EmployeeID int	NOT NULL,	
+    EmployeeSocial int	NOT NULL,	
     Floor_Sales int,
-    Internet_Sales int,
-    FOREIGN KEY(EmployeeID) REFERENCES EMPLOYEE(EmployeeID)
+    Internet_Sales int
 );			
 
 CREATE TABLE PhoneNumber(
-	PID int  	NOT NULL,
-	PhoneNumber varchar(255),
-    FOREIGN KEY(PID) REFERENCES EMPLOYEE(EmployeeID)
+	Social int  	NOT NULL,
+	PhoneNumber varchar(255)
 );
 
 CREATE TABLE Manager (
-    EmployeeID int  	NOT NULL,
+    EmployeeSocial int  	NOT NULL,
     BranchID int     NOT NULL,
-    FOREIGN KEY(EmployeeID) REFERENCES EMPLOYEE(EmployeeID),
     FOREIGN KEY(BranchID) REFERENCES BRANCH(BranchID)
 );		
 
 CREATE TABLE Customer (
-    CustomerID int 	NOT NULL,
-    NameID int NOT NULL,
+    CustomerSocial int 	NOT NULL,
     DOB date,
     EmailAddress varchar(255),
     AddressID int NOT NULL,
     CustomerType varchar(255),
     MembershipID int,
-    PRIMARY KEY(CustomerID),
-    FOREIGN KEY(NameID) REFERENCES NAMES(PID),
+    PRIMARY KEY(CustomerSocial),
     FOREIGN KEY(AddressID) REFERENCES ADDRESS(AddressID),
     FOREIGN KEY(MembershipID) REFERENCES MEMBERSHIP(MembershipID)
 );			
