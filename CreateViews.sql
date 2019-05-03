@@ -32,5 +32,7 @@ SELECT * FROM POTENTIALMEMBER;
 CREATE VIEW PopularPromotion AS
     SELECT b.Description
     FROM PaymentTransaction pt, BOOKINGS b
-    GROUP BY pt.PromotionID
+    GROUP BY pt.PromotionID, b.Description
     ORDER BY COUNT(GROUP(b.Description)) DESC;
+    
+SELECT * FROM POPULARPROMOTION;    
