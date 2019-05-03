@@ -67,6 +67,18 @@ CREATE TABLE PaymentTransaction (
     PRIMARY KEY(TransactionID) 
 );
 
+CREATE TABLE BookingDetail(		
+    BookingDetailID int   NOT NULL,
+    TransactionID int  NOT NULL,
+    Destination varchar(255),
+    TravelDate date,
+    NumberofIndividuals	 int,				
+    Arrival date,
+    Departure date,
+    PRIMARY KEY (BookingDetailID),
+    FOREIGN KEY(TransactionID) REFERENCES PAYMENTTRANSACTION(TransactionID)
+);		 
+
 CREATE TABLE Employee (						
     SSN int  	NOT NULL,
     Salary int,
@@ -106,7 +118,7 @@ CREATE TABLE Customer (
     AddressID int NOT NULL,
     CustomerType varchar(255),
     MembershipID int,
-    PRIMARY KEY(SSN),
+    PRIMARY KEY(CustomerSocial),
     FOREIGN KEY(AddressID) REFERENCES ADDRESS(AddressID),
     FOREIGN KEY(MembershipID) REFERENCES MEMBERSHIP(MembershipID)
 );			
@@ -115,14 +127,9 @@ CREATE TABLE Bookings (
     BookingID int   NOT NULL,
     SalespersonID int   NOT NULL,
     CustomerID int  NOT NULL,
-    TransactionID int  NOT NULL,
-    Destination varchar(255),
-    TravelDate date,
-    NumberofIndividuals	 int,				
-    Arrival date,
-    Departure date,
+    Booking_Details int NOT NULL,
     PRIMARY KEY(BookingID),
-    FOREIGN KEY(SalespersonID) REFERENCES PEOPLE(SSN),
-    FOREIGN KEY(CustomerID) REFERENCES PEOPLE(SSN),
-    FOREIGN KEY(TransactionID) REFERENCES PAYMENTTRANSACTION(TransactionID)
+    FOREIGN KEY(SalespersonID) REFERENCES EMPLOYEE(EmployeeID),
+    FOREIGN KEY(CustomerID) REFERENCES CUSTOMER(CustomerID),
+    FOREIGN KEY(Booking_Details) REFERENCES BOOKINGDETAIL(BookingDetailID)
 );	
