@@ -3,7 +3,7 @@
 
 SELECT Destination
 COUNT (Destination) > 3
-FROM BOOKINGS b
+FROM BookingDetail bd
 GROUP BY Destination
 ORDER BY value_occurrence DESC
 LIMIT    1;
@@ -17,7 +17,7 @@ COUNT(Manager)
 --3. Find the year with the maximum bookings. 
 
 SELECT TravelDate
-FROM BOOKINGS b
+FROM BookingDetail bd
 GROUP BY TravelDate.year
 ORDER BY value_occurrence DESC
 LIMIT    1;
