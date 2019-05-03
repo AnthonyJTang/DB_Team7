@@ -17,7 +17,7 @@ CREATE VIEW PopularDestination AS
     SELECT b.Destination, pt.amount
     FROM BOOKINGS b, PAYMENTTRANSACTION pt
     GROUP BY b.Destination, pt.amount
-    ORDER BY COUNT(GROUP(b.Destination)) DESC;
+    ORDER BY COUNT(GROUP(b.Destination));
     
 SELECT * FROM POPULARDESTINATION;
 
@@ -30,9 +30,15 @@ CREATE VIEW PotentialMember AS
 SELECT * FROM POTENTIALMEMBER;
 
 CREATE VIEW PopularPromotion AS
-    SELECT b.Description
+    SELECT b.destination, pt.PromotionID
     FROM PaymentTransaction pt, BOOKINGS b
-    GROUP BY pt.PromotionID, b.Description
-    ORDER BY COUNT(GROUP(b.Description)) DESC;
+    GROUP BY pt.PromotionID, b.destination
+    ORDER BY COUNT(GROUP(b.destination));
     
 SELECT * FROM POPULARPROMOTION;    
+
+DROP VIEW TOPSALESMEN;
+DROP VIEW TOPCUSTOMER;
+DROP VIEW POPULARDESTINATION;
+DROP VIEW POTENTIALMEMBER;
+DROP VIEW POPULARPROMOTION;
